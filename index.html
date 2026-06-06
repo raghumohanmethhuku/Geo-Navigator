@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Navigator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🗺️ Geo Navigator</h1>
+
+        <p class="subtitle">
+            Find the shortest route to your destination
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="source"
+                placeholder="Enter Source Location">
+
+            <input
+                type="text"
+                id="destination"
+                placeholder="Enter Destination Location">
+
+            <select id="sourceOptions" style="display:none;"></select>
+
+<select id="destinationOptions" style="display:none;"></select>
+
+            <button onclick="findRoute()">
+                Find Route
+            </button>
+
+            <button onclick="getCurrentLocation()">
+                📍 My Location
+        </button>
+        <button onclick="toggleFullscreen()">
+    ⛶ Full Screen
+</button>
+
+            <button onclick="searchLocations()">
+    Search Locations
+</button>
+
+        </div>
+
+        <div class="info">
+
+            <div class="card">
+                <h3>Distance</h3>
+                <p id="distance">--</p>
+            </div>
+
+            <div class="card">
+                <h3>Estimated Time</h3>
+                <p id="time">--</p>
+            </div>
+
+        </div>
+
+        <div id="map"></div>
+
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Your JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
